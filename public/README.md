@@ -6,7 +6,7 @@ A simple note-taking web app built with React, inspired by Google Keep. Users ca
 
 ## 🚀 Live Demo
 
-- **Netlify**: [Your Netlify Link Here](https://keeperap.netlify.app/)
+- **Netlify**: [https://keeperap.netlify.app/]
 
 ---
 
