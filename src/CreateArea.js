@@ -15,16 +15,20 @@ function CreateArea(props) {
   }
 
   function submitNote(event) {
-    event.preventDefault();
+    event.preventDefault(); // prevent form reload
 
-    // Validation: check if title or content is empty
-    if (note.title.trim() === "" || note.content.trim() === "") {
-      alert("Both Title and Content must be filled out.");
-      return; // stop further execution
+    const titleFilled = note.title.trim() !== "";
+    const contentFilled = note.content.trim() !== "";
+
+    if (!titleFilled || !contentFilled) {
+      alert("Please fill in both Title and Content.");
+      return;
     }
 
+    // Both fields are filled: add the note
     props.onAdd(note);
 
+    // Clear input fields after submission
     setNote({
       title: "",
       content: ""
